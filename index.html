@@ -116,34 +116,35 @@
     font-style:normal; color:var(--copper);
   }
 
-  .manifest{
+  .intro-panel{
     margin-top:44px;
     background:var(--panel);
     border:1px solid var(--line);
+    border-left:3px solid var(--copper);
     border-radius:6px;
-    overflow:hidden;
+    padding:26px 28px 24px;
   }
-  .manifest .mhead{
-    display:flex; align-items:center; gap:8px;
-    padding:10px 16px;
-    background:var(--panel-2);
-    border-bottom:1px solid var(--line);
-    font-size:12px; color:var(--text-faint);
-  }
-  .manifest .mhead .traffic{display:flex; gap:6px;}
-  .manifest .mhead .traffic span{width:9px;height:9px;border-radius:50%;background:var(--line);}
-  .manifest pre{
-    padding:20px 22px 24px;
-    font-family:'JetBrains Mono',monospace;
-    font-size:13.5px;
-    line-height:1.85;
+  .intro-panel p{
+    font-size:15.5px;
     color:var(--text-dim);
-    overflow-x:auto;
+    line-height:1.75;
+    max-width:640px;
   }
-  .manifest .k{color:var(--teal);}
-  .manifest .s{color:#D4B483;}
-  .manifest .c{color:var(--text-faint);}
-  .manifest .n{color:var(--copper);}
+  .intro-panel p b{color:var(--text); font-weight:600;}
+  .intro-stats{
+    display:flex; gap:36px; flex-wrap:wrap;
+    margin-top:24px; padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  .intro-stats .stat{display:flex; flex-direction:column; gap:3px;}
+  .intro-stats .num{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:26px; font-weight:700; color:var(--copper);
+  }
+  .intro-stats .lbl{
+    font-size:12px; color:var(--text-faint);
+    letter-spacing:0.03em;
+  }
 
   .hero-contact{
     margin-top:28px;
@@ -403,20 +404,15 @@
     <h1 class="display">Anjana P V</h1>
     <p class="role">Python &amp; Odoo ERP Developer — building <em>modules</em>, integrations, and the odd Raspberry Pi in between.</p>
 
-    <div class="manifest">
-      <div class="mhead">
-        <div class="traffic"><span></span><span></span><span></span></div>
-        <span>__manifest__.py</span>
+    <div class="intro-panel">
+      <p>
+        Python / Odoo Developer with <b>4 years</b> of experience at Cybrosys Technologies Pvt. Ltd., Calicut, building and customizing Odoo ERP modules end-to-end. Hands-on expertise across the Odoo ORM, PostgreSQL, QWeb, and JavaScript, with a track record of REST API integrations, IoT hardware projects, and multi-version migrations (Odoo 15 → 18).
+      </p>
+      <div class="intro-stats">
+        <div class="stat"><span class="num">4</span><span class="lbl">years experience</span></div>
+        <div class="stat"><span class="num">6</span><span class="lbl">shipped projects</span></div>
+        <div class="stat"><span class="num">4</span><span class="lbl">Odoo versions migrated</span></div>
       </div>
-      <pre class="mono">{
-    <span class="k">'name'</span>: <span class="s">'Anjana P V'</span>,
-    <span class="k">'summary'</span>: <span class="s">'Python / Odoo Developer'</span>,
-    <span class="k">'version'</span>: <span class="n">'4.0.2022'</span>,  <span class="c"># years active</span>
-    <span class="k">'author'</span>: <span class="s">'Cybrosys Technologies, Calicut'</span>,
-    <span class="k">'category'</span>: <span class="s">'ERP / Backend / Integrations'</span>,
-    <span class="k">'depends'</span>: [<span class="s">'python'</span>, <span class="s">'postgresql'</span>, <span class="s">'odoo_orm'</span>, <span class="s">'qweb'</span>, <span class="s">'javascript'</span>],
-    <span class="k">'installable'</span>: <span class="n">True</span>,
-}</pre>
     </div>
 
     <div class="hero-contact">
